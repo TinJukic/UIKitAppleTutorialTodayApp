@@ -9,16 +9,13 @@ import UIKit
 
 class ReminderListViewController: UICollectionViewController {
 
-    typealias DataSource = UICollectionViewDiffableDataSource<Int, String>
-    typealias Snapshot = NSDiffableDataSourceSnapshot<Int, String>
-
     var dataSource: DataSource!
 
     init() {
 
         super.init(collectionViewLayout: ReminderListViewController.listLayout())
 
-        view.backgroundColor = .systemTeal
+        view.backgroundColor = .systemGray6
     }
     
     required init?(coder: NSCoder) {
@@ -29,16 +26,7 @@ class ReminderListViewController: UICollectionViewController {
 
         super.viewDidLoad()
 
-        let cellRegistration = UICollectionView.CellRegistration {
-
-            (cell: UICollectionViewListCell, indexPath: IndexPath, itemIdentifier: String) in
-
-            let reminder = Reminder.sampleData[indexPath.item]
-
-            var contentConfiguration = cell.defaultContentConfiguration()
-            contentConfiguration.text = reminder.title
-            cell.contentConfiguration = contentConfiguration
-        }
+        let cellRegistration = UICollectionView.CellRegistration(handler: cellRegistrationHandler)
 
         dataSource = .init(collectionView: collectionView) {
 
