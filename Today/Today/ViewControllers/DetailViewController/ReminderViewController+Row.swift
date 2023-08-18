@@ -11,6 +11,7 @@ extension ReminderViewController {
 
     enum Row: Hashable {
 
+        case header(String)
         case date
         case notes
         case time
@@ -23,7 +24,7 @@ extension ReminderViewController {
             case .date: return "calendar.circle"
             case .notes: return "square.and.pencil"
             case .time: return "clock"
-            case .title: return nil
+            case .title, .header(_): return nil
             }
         }
 
@@ -41,7 +42,7 @@ extension ReminderViewController {
             switch self {
 
             case .title: return .headline
-            case .date, .notes, .time: return .subheadline  // more expressive
+            case .date, .notes, .time, .header(_): return .subheadline  // more expressive
             // OR -> default: return .subheadline
             }
         }
