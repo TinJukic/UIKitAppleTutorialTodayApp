@@ -40,6 +40,7 @@ class TextFieldContentView: UIView, UIContentView {
     private func addViews() {
 
         textField.clearButtonMode = .whileEditing
+        textField.addTarget(self, action: #selector(didChange(_:)), for: .editingChanged)
 
         addPinnedSubview(textField, insets: .init(top: 0, left: 16, bottom: 0, right: 16))
     }
@@ -50,6 +51,15 @@ class TextFieldContentView: UIView, UIContentView {
 
         textField.text = configuration.text
     }
+
+    @objc
+    private func didChange(_ sender: UITextField) {
+
+        guard let configuration = configuration
+                as? TextFieldContentView.Configuration else { return }
+
+        configuration.onChange(textField.text ?? "")
+    }
 }
 
 // MARK: - Configuration Struct
@@ -59,6 +69,7 @@ extension TextFieldContentView {
     struct Configuration: UIContentConfiguration {
 
         var text: String? = ""
+        var onChange: (String) -> Void = { _ in }
 
         func makeContentView() -> UIView & UIContentView {
 
