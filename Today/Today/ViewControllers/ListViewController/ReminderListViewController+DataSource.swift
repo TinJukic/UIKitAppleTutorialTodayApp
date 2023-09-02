@@ -43,6 +43,8 @@ extension ReminderListViewController {
         }
 
         dataSource.apply(snapshot)
+
+        headerView?.progress = progress
     }
 
     func cellRegistrationHandler(
