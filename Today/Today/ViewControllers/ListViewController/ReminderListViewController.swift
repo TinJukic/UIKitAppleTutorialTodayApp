@@ -105,6 +105,13 @@ class ReminderListViewController: UICollectionViewController {
         collectionView.dataSource = dataSource
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+
+        super.viewWillAppear(animated)
+
+        refreshBackground()
+    }
+
     override func collectionView(
         _ collectionView: UICollectionView,
         shouldSelectItemAt indexPath: IndexPath
@@ -141,6 +148,18 @@ class ReminderListViewController: UICollectionViewController {
         }
 
         navigationController?.pushViewController(viewController, animated: true)
+    }
+
+    func refreshBackground() {
+
+        collectionView.backgroundView = nil
+
+        let backgroundView = UIView()
+        backgroundView.layer.addSublayer(
+            CAGradientLayer.gradientLayer(for: listStyle, in: collectionView.frame)
+        )
+
+        collectionView.backgroundView = backgroundView
     }
 
     private func makeSwipeActions(for indexPath: IndexPath?) -> UISwipeActionsConfiguration? {

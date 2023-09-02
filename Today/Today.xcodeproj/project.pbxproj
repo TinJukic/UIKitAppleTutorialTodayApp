@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		26ED02922AA356F600BEC612 /* ReminderListStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ED02912AA356F600BEC612 /* ReminderListStyle.swift */; };
 		26ED02942AA37BC900BEC612 /* ProgressHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ED02932AA37BC900BEC612 /* ProgressHeaderView.swift */; };
+		26ED02962AA389B100BEC612 /* CAGradientLayer+ListStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ED02952AA389B100BEC612 /* CAGradientLayer+ListStyle.swift */; };
 		E30B700C2A8E582700486EB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30B700B2A8E582700486EB0 /* AppDelegate.swift */; };
 		E30B700E2A8E582700486EB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30B700D2A8E582700486EB0 /* SceneDelegate.swift */; };
 		E30B70102A8E582700486EB0 /* ReminderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30B700F2A8E582700486EB0 /* ReminderListViewController.swift */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		26ED02912AA356F600BEC612 /* ReminderListStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderListStyle.swift; sourceTree = "<group>"; };
 		26ED02932AA37BC900BEC612 /* ProgressHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHeaderView.swift; sourceTree = "<group>"; };
+		26ED02952AA389B100BEC612 /* CAGradientLayer+ListStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+ListStyle.swift"; sourceTree = "<group>"; };
 		E30B70082A8E582700486EB0 /* Today.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Today.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E30B700B2A8E582700486EB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E30B700D2A8E582700486EB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			children = (
 				E30B70232A8E66F400486EB0 /* UIColor+Today.swift */,
 				E30B70252A8E671B00486EB0 /* Date+Today.swift */,
+				26ED02952AA389B100BEC612 /* CAGradientLayer+ListStyle.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				E30B70292A8E6A0200486EB0 /* ReminderListViewController+DataSource.swift in Sources */,
 				E3BDD30F2A93709F00FBC5A6 /* UIView+PinnedSubview.swift in Sources */,
 				E30B700E2A8E582700486EB0 /* SceneDelegate.swift in Sources */,
+				26ED02962AA389B100BEC612 /* CAGradientLayer+ListStyle.swift in Sources */,
 				E30B70212A8E59E600486EB0 /* Reminder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
