@@ -11,6 +11,17 @@ class ReminderListViewController: UICollectionViewController {
 
     var dataSource: DataSource!
     var reminders: [Reminder] = Reminder.sampleData
+    var listStyle: ReminderListStyle = .today
+
+    var filteredReminders: [Reminder] {
+        reminders.filter { listStyle.shouldInclude(date: $0.dueDate) }.sorted { $0.dueDate < $1.dueDate }
+    }
+
+    let listStyleSegmentedControl = UISegmentedControl(items: [
+        ReminderListStyle.today.name,
+        ReminderListStyle.future.name,
+        ReminderListStyle.all.name,
+    ])
 
     init() {
 
@@ -52,6 +63,10 @@ class ReminderListViewController: UICollectionViewController {
 
         navigationItem.rightBarButtonItem = addButton
 
+        listStyleSegmentedControl.selectedSegmentIndex = listStyle.rawValue
+        listStyleSegmentedControl.addTarget(self, action: #selector(didChangeListStyle), for: .valueChanged)
+        navigationItem.titleView = listStyleSegmentedControl
+
         if #available(iOS 16, *) {
 
             navigationItem.style = .navigator
@@ -67,7 +82,7 @@ class ReminderListViewController: UICollectionViewController {
         shouldSelectItemAt indexPath: IndexPath
     ) -> Bool {
 
-        let id = reminders[indexPath.item].id
+        let id = filteredReminders[indexPath.item].id
 
         pushDetailViewForReminder(withId: id)
 

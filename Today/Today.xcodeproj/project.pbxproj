@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26ED02922AA356F600BEC612 /* ReminderListStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ED02912AA356F600BEC612 /* ReminderListStyle.swift */; };
 		E30B700C2A8E582700486EB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30B700B2A8E582700486EB0 /* AppDelegate.swift */; };
 		E30B700E2A8E582700486EB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30B700D2A8E582700486EB0 /* SceneDelegate.swift */; };
 		E30B70102A8E582700486EB0 /* ReminderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30B700F2A8E582700486EB0 /* ReminderListViewController.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		26ED02912AA356F600BEC612 /* ReminderListStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderListStyle.swift; sourceTree = "<group>"; };
 		E30B70082A8E582700486EB0 /* Today.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Today.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E30B700B2A8E582700486EB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E30B700D2A8E582700486EB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				E30B70202A8E59E600486EB0 /* Reminder.swift */,
+				26ED02912AA356F600BEC612 /* ReminderListStyle.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				E3E189542A8F65D600279AAC /* ReminderListViewController+Actions.swift in Sources */,
 				E3E189572A8F91BD00279AAC /* ReminderViewController.swift in Sources */,
 				E30B700C2A8E582700486EB0 /* AppDelegate.swift in Sources */,
+				26ED02922AA356F600BEC612 /* ReminderListStyle.swift in Sources */,
 				E3BDD3132A937B1200FBC5A6 /* UIContentConfiguration+Stateless.swift in Sources */,
 				E30B70242A8E66F400486EB0 /* UIColor+Today.swift in Sources */,
 				E3E1895A2A8F946500279AAC /* ReminderViewController+Row.swift in Sources */,
