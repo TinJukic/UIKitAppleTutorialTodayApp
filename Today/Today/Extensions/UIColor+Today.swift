@@ -2,7 +2,7 @@
 //  UIColor+Today.swift
 //  Today
 //
-//  Created by Tin Jukic on 17.08.2023..
+//  Created by Tin Jukic on 18.08.2023..
 //
 
 import UIKit
